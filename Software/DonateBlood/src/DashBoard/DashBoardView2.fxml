@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="800.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashBoard.DashBoardViewController">
+   <children>
+      <Label layoutX="294.0" layoutY="49.0" text="Dashboard">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="Pic1" fitHeight="150.0" fitWidth="200.0" layoutX="45.0" layoutY="125.0" onMouseClicked="#doPic1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Maharashtra-12th-registration.jpg" />
+         </image></ImageView>
+      <ImageView fx:id="Pic2" fitHeight="150.0" fitWidth="200.0" layoutX="295.0" layoutY="115.0" onMouseClicked="#doPic2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@new_issues_button.png" />
+         </image></ImageView>
+      <ImageView fx:id="Pic3" fitHeight="150.0" fitWidth="200.0" layoutX="525.0" layoutY="105.0" onMouseClicked="#doPic3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Donate-Button.jpg" />
+         </image></ImageView>
+      <ImageView fx:id="Pic4" fitHeight="150.0" fitWidth="200.0" layoutX="145.0" layoutY="315.0" onMouseClicked="#doPic4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@views-512.png" />
+         </image></ImageView>
+      <ImageView fx:id="Pic5" fitHeight="150.0" fitWidth="200.0" layoutX="395.0" layoutY="315.0" onMouseClicked="#doPic5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Slider-Units-Available.jpg" />
+         </image></ImageView>
+   </children>
+</AnchorPane>
