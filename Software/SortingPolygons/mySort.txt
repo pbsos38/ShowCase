@@ -1,0 +1,2 @@
+Team Shiva choose Heap sort as the sort of their choice which has O(n log(n)) Complexity.
+Heap sort is a kind of sort which sorts the data by looking for smallest values and moving that value to the front and this process keeps countinuing till the data is sorted down. 
