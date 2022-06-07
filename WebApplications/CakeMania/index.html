@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Body Starts -->
+    <form onsubmit="generateResult(); return false">
+        <!-- Header -->
+        <div id="header">
+            <img src = "https://media.istockphoto.com/vectors/shopping-cart-line-icon-fast-buy-vector-logo-vector-id1184670036?k=6&m=1184670036&s=170667a&w=0&h=AwMUISU-TUCgTso_A-5kPrS8i_EgIiA4lF3-cNZOWQo=" style="border-radius: 50%; height: 50px; float: left; margin-left: 50px">
+            <a href="index.html" style="margin-left: -180px;">Buy With Us </a><br>
+            <a style="text-align: right; font-size: 15px; margin-left: 780px;">16 Ave NW, Calgary</a><br>
+            <a style="text-align: right; font-size: 15px; margin-left: 820px;">Phone No: +1(587) 333 6720</a>
+        </div>
+        <br><br>
+        <br><br>
+        <br><br>
+        <fieldset style="border-width: 5px; border-radius: 30px;">
+            <!-- Personal Credentials -->
+            <table>
+                <tr>
+                    <th>
+                        <label for="name">First Name</label>
+                    </th>
+                    <td>
+                        <input type="text" name="name"  id="FirstnameInput"   pattern="^[A-Za-z -]+$"  maxlength="25" placeholder="Enter your first name here"  required autofocus>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="name">Last Name</label></th>
+                    <td><input type="text" name="name"  id="LastnameInput"   pattern="^[A-Za-z -]+$"  maxlength="25" placeholder="Enter your last name here" required ></td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="address">Address</label>
+                    </th>
+                    <td>    
+                        <input type="text" name="Address" id="addressInput" placeholder="Enter Your Address" required >
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="postalCode">Postal Code</label>
+                    </th>
+                    <td>
+                        <input type="text" name="Postal Code"  pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="A1A 1A1" id="postalCodeInput" required >
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        <label for="phone">Phone Number</label>
+                        
+                    </th>
+                    <td style="text-align: left;">
+                        <input type="tel" name="phone" id="phoneInput" placeholder="000-000-0000" pattern="[0-9]{3}[-][0-9]{3}[-][0-9]{4}" required>
+                    </td>
+                </tr> 
+                <tr>
+                    <th>
+                        <label for="email">E-mail</label>
+                    </th>
+                    <td>
+                        <input type="email" name="emailInput" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="emailInput" placeholder="abc@example.com" required>
+                    </td>
+                </tr>
+            </table>
+            <!-- Elemetnt Cards -->
+            <div class="card" id="elementCard">
+                <table>
+                    <tr>
+                        <th>
+                            <!-- Left/BackArrow -->
+                            <figure >
+                                <img src="https://lh3.googleusercontent.com/proxy/jGT_aemrcJl4BA0853rispjakY1OeWuLL5AvuXsN_qFO3HqJX-zeo_FmJDeNapJ_6hByfg32jx2hJTG7rjf-CQkVb0qZUTw" id="BackArrow" style="width: 40px; height: 40px; " alt="">
+                                <figcaption>Previous</figcaption>
+                            </figure>
+                        </th>
+                        <!-- Resource Picture -->
+                        <th style="text-align: center;">
+                            <figure >
+                                <img style="width: 250px; height: 250px;  border-radius: 20px;" id="resourcePic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlDgO5HYpKN8waETP1htoz71ifU6tsfpCTFA&usqp=CAU" >
+                                <figcaption id="resourceCaptions" style="text-align: center;">Captions Here</figcaption>
+                            </figure>
+                        
+                            <button id="squarebtn" type="button" value="Square" style="margin: auto;">Select</button>
+                            <button id="cylinderbtn"  type="button" value="Cylinder" style="margin: auto;">Select</button>
+                            <button id="spherebtn" type="button" value="sphere" style="margin: auto;">Select</button>
+                            <button id="conebtn" type="button" value="Truncated Cone" style="margin: auto;">Select</button>
+                        </th>
+                        <!-- Right/Next Arrow -->
+                        <th>
+                            <figure >
+                                <img src="https://img.favpng.com/5/16/6/arrow-computer-icons-button-png-favpng-9j8yxJqVhwBmU9ucypnWVgMLm.jpg" id="NextArrow" style="width: 40px; height: 40px; " alt="">
+                                <figcaption>Next</figcaption>
+                            </figure>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="card" id="results" style="display: none;" >
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfkHVAu5R6x_fUzmBZB_AybuNzB7C3B_BAbw&usqp=CAU"  onclick="clearContent();" style="width: 25px; height: 25px; float: right; padding: 10px;">
+                </div>
+            
+            <div id="add">
+            </div>
+            </div>
+            
+            <button type="submit">Calculate</button>
+            <button type="reset">Clear</button>
+        </fieldset>
+        <br>
+    </form>
+    <!-- Output container for the formatted bill -->
+    <div id="output">
+    </div>
+<!-- Body Ends -->
+</body>
+</html>

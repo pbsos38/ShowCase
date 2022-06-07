@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Western Valley Farms</title>
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <form onsubmit="generateBill(); return false">
+        <div id="header">
+            <img src = "Images/logo.jpg" style="border-radius: 50%; height: 50px; float: left; margin-left: 50px">
+          <a href="index.html" style="margin-left: -150px; ">Western Valley Farms</a>
+        </div>
+        <br><br>
+        <div class="w50l" style="margin-top: 70px;">
+            <fieldset style="border-width: 5px;">
+                <legend>Personal Infomration</legend>
+        <table>
+            <tr>
+                <th>
+                    <label for="Currnet_Date">Currnet Date</label>
+                </th>
+                <td>
+                    <input type="date" name="Currnet" id="Currnet_date_input" >
+                </td>
+            </tr>
+            <tr>
+                <th><label for="name">Client Name</label></th>
+                <td><input type="text" name="name"  id="name_input"   pattern="^[A-Za-z -]+$"  maxlength="25" placeholder="Enter your name here"  required></td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="address">Street Address</label>
+                </th>
+                <td>
+                    <input type="text" name="Address" id="address_input" required >
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="postalCode">Postal Code</label>
+                </th>
+                <td>
+                    <input type="text" name="Postal Code"  pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" id="postalCode_input" >
+                </td>
+            </tr>
+            
+            <tr>
+                <th>
+                    <label for="phone">Phone Number</label>
+                    
+                </th>
+                <td style="text-align: left;">
+                    <input type="radio" id="personal" name="numberType" value="Personal">
+                    <label for="Personal">Personal</label>
+                    <input type="radio" id="Business" name="numberType" value="Business">
+                    <label for="Business">Business</label>
+                    <br>
+                    <input type="tel" name="phone" id="phone_input" placeholder="000-000-0000" pattern="[0-9]{3}[-][0-9]{3}[-][0-9]{4}">
+                </td>
+            </tr>
+            
+            <tr>
+                <th>
+                    <label for="email">E-mail</label>
+                </th>
+                <td>
+                    <input type="email" name="email_input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email_input" placeholder="abc@example.com">
+                </td>
+            </tr>
+            
+            <tr>
+                <th>
+                    <label for="phone">Choice of Pickup or Delivery</label>
+                    
+                </th>
+                <td id="modeOfDelivery">
+                    <input type="radio" id="Pickup" name="PickupType" value="Pickup" required>
+                    <label for="Pickup">Pickup</label>
+                    <input type="radio" id="delivery" name="PickupType" value="Delivery">
+                    <label for="Delivery">Delivery</label>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+    </div>
+
+
+        <div class="cart w50r" style="margin-top: 70px;">
+            <h2> Your Cart</h2>
+            <div class="card">
+                <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img id="menuSubItem" src="images/VegetableHamper.jpg" alt="VegetableHamper" >
+                                </figure>
+            
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="item1" name="item1" value="30" onchange="changeVisibilty(this.id)">
+                                            <label for="item1">Vegetable Hamper</label>
+                                            <br>
+                                            <label id="smallText" for="item1">Price:20 KG for $30 </label>
+                                            <br>
+                                            <label id="item1_value" style="font-size: 15px;" for="item1"></label>
+                                            <br>
+                                            <input  type="item1" name="item1"  id="item1_input"   value="0"  style="visibility: hidden; width: 40px;" step="1" min="0"  >
+                                            <div id="buttonStyle">
+                                                <button type="button" id="item1_Add" style="visibility: hidden;" onclick="add('item1');">Add</button>
+                                                <button type="button" id="item1_Remove" style="visibility: hidden;" onclick="remove('item1');">Remove</button>
+                                                </div>
+                                        </td>
+                                    </tr>
+                                </table>                                
+                            </td>
+                        </tr>
+                </table>
+            </div>
+            
+            <div class="card">
+                <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img id="menuSubItem" src="images/FruitHamper.jpg" alt="FruitHamper">
+                                </figure>
+                                
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>
+                    
+                                                <input type="checkbox" id="item2" name="item2" value="20" onchange="changeVisibilty(this.id)">
+                                                <label for="item2">Fruit Hamper</label>
+                                                <br>
+                                                <label id="smallText" for="item2">Price:10 KG for $20 </label>
+                                                <br>
+                                                <label id="item2_value" style="font-size: 15px;" for="item2"></label>
+                                                <br>
+                                                    <input type="number" name="item2"  id="item2_input"     value="0" style="visibility: hidden;width: 40px;" step="1" min="0"   >
+                                                    <div id="buttonStyle">
+                                                <button type="button" id="item2_Add" style="visibility: hidden;" onclick="add('item2');">Add</button>
+                                                <button type="button" id="item2_Remove" style="visibility: hidden;" onclick="remove('item2');"> Remove</button>
+                                                </div>
+                                        </td>
+                                    </tr>
+                                </table>                                
+                            </td>
+                        </tr>
+                </table>
+            </div>
+            
+            <div class="card">
+                <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img id="menuSubItem" src="images/FreshChicken.jpg" alt="FreshChicken">
+                                    </figure>          
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>
+                                                <input type="checkbox" id="item3" name="item3" value="4" onchange="changeVisibilty(this.id)">
+                                                <label for="item3">Fresh Chicken</label>
+                                                <br>
+                                                <label id="smallText" for="item3">Price:1 KG for $4 </label>
+                                                <br>
+                                                <label id="item3_value" style="font-size: 15px;" for="item3"></label>
+                                                <br>
+                                                
+                                                <input type="number" name="item3"  id="item3_input"   value="0"  style="visibility: hidden;width: 40px;" step="1" min="0" >
+                                                <div id="buttonStyle">
+                                                <button type="button" id="item3_Add" style="visibility: hidden;" onclick="add('item3');">Add</button>
+                                                <button type="button" id="item3_Remove" style="visibility: hidden;" onclick="remove('item3');">Remove</button>
+                                                </div>
+                                        </td>
+                                    </tr>
+                                </table>                                
+                            </td>
+                        </tr>
+                </table>
+            </div>
+            
+
+            <div class="card">
+                <table>
+                        <tr>
+                            <td>
+                                <figure>
+                                    <img id="menuSubItem" src="images/pork.jpg" alt="pork">
+                                </figure>        
+                            
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>
+                                                <input type="checkbox" id="item4" name="item4" value="5" onchange="changeVisibilty(this.id)">
+                                                <label for="item4">Pork</label>
+                                                <br>
+                                                <label id="smallText" for="item4">Price:1 KG for $5 </label>
+
+                                                <br>
+                                                <label id="item4_value" style="font-size: 15px;" for="item4"></label>
+                                                <br>
+                                                
+                                                <input  type="number" name="item4"  id="item4_input" value="0" style="visibility: hidden; width: 40px;" step="1" min="0" >
+                                                    <div id="buttonStyle">
+                                                <button type="button"  id="item4_Add" style="visibility: hidden;" onclick="add('item4');">Add</button>
+                                                <button type="button" id="item4_Remove" style="visibility: hidden;" onclick="remove('item4');">Remove</button>
+                                                </div>
+                                        </td>
+                                    </tr>
+                                </table>                                
+                            </td>
+                        </tr>
+                </table>
+            </div>
+            <tr>
+               
+            </tr>
+                       
+        </table>
+    
+    
+    </div>
+</div>
+<button type="submit">Place Order</button> <button type="reset">Clear Order</button>
+<br>
+<div id="bill">
+
+</div>
+    </form>
+</body>
+</html>
