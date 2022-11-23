@@ -1,0 +1,254 @@
+body {
+	background-color: #faf2db;
+	color: #444444;
+}
+
+* {
+	font-family: "Roboto Slab", serif;
+}
+
+/* background for the nav bars */
+.basicNavBar {
+	background-color: #fffef9;
+	color: #5b642c !important;
+	text-decoration: none;
+}
+/* styling for the nav bar links */
+.basicNavBarItem {
+	color: #5b642c !important;
+	text-decoration: none;
+}
+.basicNavBarItem:hover {
+	color: #757e47 !important;
+	text-decoration: underline;
+}
+
+.basicLinks {
+	color: #444444;
+	text-decoration: none;
+}
+
+
+/* for login screen, makes sure photo is taking the full screen height */
+.loginscreen {
+	height: 100vh;
+}
+
+/* page backgrounds */
+	.loginBG {
+		width: 100%;
+		height: 100vh;
+		opacity: 0.6;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+		background-image: url("../style/LoginBG.jpg");
+	}
+	.adminHomePage {
+		background-image: url("../style/AdminHomeBG.jpg"); /*Photo source: https://unsplash.com/photos/0Bs3et8FYyg*/
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+	}
+	.employeeHomePage {
+		background-image: url("../style/EmployeeHomeBG.jpg"); /*Photo source: https://unsplash.com/photos/xWZa0GYCMbo*/
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+	}
+	.myInfoPage {
+		background-image: url("../style/EmployeeListBG.jpg"); /*Photo source: https://unsplash.com/photos/6-aOgypz3lA*/
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+	}
+	.adminEmployeesPage {
+		background-image: url("../style/EmployeeListBG.jpg"); /*Photo source: https://unsplash.com/photos/6-aOgypz3lA*/
+		width: 100%;
+		height: 100vh;
+		overflow: scroll;
+		background-size: cover;
+		background-position: center;
+	}
+	.employeePaystubsPage {
+		background-image: url("../style/PaystubsBG.jpg"); /*Photo source: https://unsplash.com/photos/RKsLQoSnuTc*/
+		width: 100%;
+		height: 100vh;
+		overflow: scroll;
+		background-size: cover;
+		background-position: center;
+	}
+
+/* controls background of the inner background */
+.innerAdmin {
+	background-color: #faf2db;
+}
+
+/* button colors */
+	.PrimaryButton {
+		border: solid #f84111;
+		background-color: #f84111;
+	}
+	.PrimaryButton:hover {
+		border: solid #ff613a;
+		background-color: #ff613a;
+	}
+	.SecondaryButton {
+		border: solid #f8bf4d;
+		background-color: #f8bf4d;
+	}
+	.SecondaryButton:hover {
+		border: solid #fdcf74;
+		background-color: #fdcf74;
+	}
+	.empPaystubButton {
+		background-color: #fffef9;
+	}
+	.empPaystubButton:hover {
+		background-color: #f8bf4d;
+	}
+
+.innnerInfo {
+	margin-top: 20px;
+	color: #5b642c;
+	text-align: center;
+}
+.employeeHeader {
+	background-color: #5b642c;
+	color: #faf2db;
+}
+
+/* main header text color (olive) */
+.mainHeaders {
+	color: #5b642c;
+}
+
+/* styling for list of employees in (employeeCard) */
+	.accordion {
+		padding: 0;
+	}
+	.accordion-item {
+		list-style: none;
+	}
+	.accordion-toggle {
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		background-color: #faf2db;
+		padding: 1em;
+		color: #5b642c;
+	}
+	.accordion-toggle:hover {
+		background-color: #f8edcb;
+	}
+	.accordion-toggle h3 {
+		margin: 0;
+	}
+	.accordion-content {
+		background-color: white;
+		padding: 1em;
+	}
+	.accordion-content p {
+		margin: 0;
+		margin-left: 2em;
+	}
+	.employee_card_list_tweaks {
+		background-color: #f8edcb;
+		font-size: 0.7em;
+	}
+	.ecLi {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+/* handles the styling for list of employee's button */
+	#employeeCardallowRemoveButton {
+		width: 40%;
+		height: auto;
+		float: left;
+	}
+	#employeeCardSubmitButton {
+		width: 40%;
+		height: auto;
+		float: left;
+	}
+	#employeeCardRemoveButton {
+		width: 40%;
+		height: auto;
+		float: left;
+	}
+	#employeeCardEditButton {
+		width: 40%;
+		height: auto;
+		float: left;
+	}
+
+.haeHeader th,
+.dHeader th,
+.sumHeader th {
+	text-align: center;
+}
+
+.haeBody td,
+.dBody td {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+.tableHeader {
+	background-color: #5b642c;
+}
+
+.paystubTable {
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+.calenderDay {
+	cursor: pointer;
+}
+
+.dropdown {
+	width: 100%;
+}
+
+.myalert {
+	width: max-content;
+}
+
+.alertRow {
+	width: 100%;
+
+	text-align: center;
+
+	align-items: center;
+
+	align-content: center;
+}
+
+.newEmployeeRow {
+	padding: 5px;
+}
+
+.newEmployeeRowText {
+	text-align: right;
+
+	padding: 5px;
+}
+
+.errorText {
+	color: #f84111;
+}
+
+.newEmpTable td {
+	width: 33%;
+	border-bottom: 0;
+}
